@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>AR.js Hiro Marker Demo</title>
+    <title>AR.js Card Image Demo</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
@@ -10,20 +10,20 @@
 
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
         
+        <a-assets>
+            <img id="img" src="img/card.png">
+        </a-assets>
+
         <a-marker preset="hiro">
             
-            <a-box 
-                position="0 0.5 0" 
-                material="opacity: 0.8; color: #4CC3D9;"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear">
-            </a-box>
-
-            <a-box 
-                position="1 0.5 0" 
-                scale="0.2 0.2 0.2"
-                color="#EF2D5E"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 1500; easing: linear">
-            </a-box>
+            <a-image 
+                src="#cardImg" 
+                position="0 0.1 0" 
+                rotation="-90 0 0" 
+                width="1.65" 
+                height="1"
+                material="transparent: true; opacity: 1;">
+            </a-image>
 
         </a-marker>
 
